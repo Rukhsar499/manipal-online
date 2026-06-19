@@ -1,0 +1,701 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Custom Global Properties */
+:root {
+    --primary-orange: #f05a28;
+    --primary-orange-hover: #d44819;
+    --text-dark: #1e293b;
+    --bg-light: #F0F5FC;
+    --font-sans: "Manrope", sans-serif, 
+}
+
+h2{
+    color: #0B1C30;
+    font-weight: 800;
+}
+
+/* Header Tweaks */
+.site-header {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.brand-logo {
+    color: var(--primary-orange);
+    font-size: 1.5rem;
+}
+.brand-text {
+    font-size: 1.25rem;
+    letter-spacing: -0.5px;
+    color: #64748b;
+}
+.nav-link {
+    font-weight: 500;
+    color: #475569;
+    transition: color 0.3s ease;
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-orange) !important;
+}
+
+/* Button UI Variants */
+.btn-orange-outline {
+    border: 2px solid var(--primary-orange);
+    color: var(--primary-orange);
+    transition: all 0.3s ease;
+}
+.btn-orange-outline:hover {
+    background-color: var(--primary-orange);
+    color: #fff;
+    transform: translateY(-2px);
+}
+.btn-orange-solid {
+    background: linear-gradient(135deg, var(--primary-orange) 0%, #ff7e53 100%);
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+.btn-orange-solid:hover {
+    background: linear-gradient(135deg, #d44819 0%, var(--primary-orange) 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(240, 90, 40, 0.3) !important;
+}
+
+/* Hero Elements */
+.hero-section {
+    padding: 160px 0 100px 0;
+    min-height: 100vh;
+}
+
+/* Decorative Dynamic Backgrounds */
+.bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+    opacity: 0.5;
+}
+.shape-1 {
+    width: 400px;
+    height: 400px;
+    background: rgba(240, 90, 40, 0.15);
+    top: -100px;
+    left: -100px;
+}
+.shape-2 {
+    width: 500px;
+    height: 500px;
+    background: rgba(14, 165, 233, 0.1);
+    bottom: -150px;
+    right: -100px;
+}
+
+/* Micro Elements */
+.badge-accredited {
+    background: #fff;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0,0,0,0.05);
+    color: #475569;
+}
+.hero-title {
+    font-size: 2.8rem;
+    line-height: 1.25;
+    letter-spacing: -1px;
+}
+.text-orange {
+    color: var(--primary-orange);
+}
+.text-gradient {
+    background: linear-gradient(to right, #1e293b, #475569);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 580px;
+}
+
+/* Feature Badges */
+.feature-card {
+    background: #ffffff;
+    padding: 12px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.02);
+}
+.icon-box {
+    width: 42px;
+    height: 42px;
+    background: rgba(240, 90, 40, 0.1);
+    color: var(--primary-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+/* Right Side Image & Circle styling */
+.hero-image-wrapper {
+    position: absolute;
+    bottom: -100px;
+    left: -120px;
+    width: 110%;
+    z-index: 1;
+    pointer-events: none;
+}
+.image-bg-circle {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background: #fdeee9;
+    border-radius: 50%;
+    bottom: 40px;
+    left: 40px;
+    z-index: -1;
+}
+.model-img {
+    mix-blend-mode: multiply;
+    transform: scaleX(-1); /* Flips image if needed to match composition */
+}
+
+/* Modern Form UI Styling */
+.form-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    position: relative;
+    z-index: 2;
+}
+.form-title {
+    color: var(--text-dark);
+    font-size: 1.4rem;
+    letter-spacing: -0.5px;
+}
+.form-control, .form-select {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    background-color: #fff;
+    transition: all 0.2s ease;
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 4px rgba(240, 90, 40, 0.15);
+}
+.custom-checkbox .form-check-input:checked {
+    background-color: var(--primary-orange);
+    border-color: var(--primary-orange);
+}
+
+/* Responsiveness (Tablet & Mobile Breakpoints) */
+@media (max-width: 1200px) {
+    .hero-title { font-size: 2.3rem; }
+    .hero-image-wrapper { left: -80px; width: 100%; }
+}
+
+@media (max-width: 991.98px) {
+    .hero-section { padding-top: 120px; padding-bottom: 60px; }
+    .hero-title { font-size: 2.1rem; }
+    .form-card {
+        margin-top: 2rem;
+        background: #ffffff; /* Turns solid on standard tablets for better performance */
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-title { font-size: 1.85rem; }
+    .hero-desc { font-size: 0.95rem; }
+    .form-card { padding: 1.5rem !important; }
+    .form-title { font-size: 1.2rem; }
+}
+/* Container Card Design */
+.accreditations-card {
+    background-color: #fff;
+    
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accreditations-card:hover {
+    border-color: var(--border-blue);
+    box-shadow: 0 20px 50px rgba(59, 130, 246, 0.08);
+}
+
+/* Typography Details */
+.section-title {
+    font-size: 1.85rem;
+    letter-spacing: -0.5px;
+    color: var(--text-dark) !important;
+}
+
+/* Accreditation Grid Node */
+.accreditation-item {
+    padding: 1rem 0.5rem;
+    border-radius: 16px;
+    background: transparent;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* High-end Micro-Interactions on Hover */
+.accreditation-item:hover {
+    transform: translateY(-6px);
+}
+
+.accreditation-item:hover .brand-logo-img {
+    transform: scale(1.04);
+    filter: grayscale(0%) drop-shadow(0 8px 16px rgba(0,0,0,0.06));
+}
+
+.accreditation-item:hover .accreditation-text {
+    color: var(--text-dark) !important;
+}
+
+/* Logo Sizing & Uniformity Rules */
+.logo-wrapper {
+    height: 90px; /* Standardize bounds to handle mixed asset dimensions flawlessly */
+    width: 100%;
+    overflow: hidden;
+}
+
+.brand-logo-img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    filter: grayscale(10%) contrast(95%); /* Keeps branding clean yet uniform until active */
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accreditation-text {
+    font-size: 0.825rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #64748b !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Clean Custom Interface Pagination Dots */
+.dots-indicator .dot {
+    width: 6px;
+    height: 6px;
+    background-color: #cbd5e1;
+    border-radius: 2px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dots-indicator .dot.active {
+    background-color: var(--primary-orange);
+    transform: scale(1.2) rotate(45deg); /* Styled like the orange active indicator rhombus in the asset */
+    border-radius: 1px;
+}
+
+/* Responsive Overrides (Tab and Mobile Performance optimization) */
+@media (max-width: 767.98px) {
+    .accreditations-card {
+        border-radius: 16px;
+        padding: 2rem 1rem !important;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .logo-wrapper {
+        height: 70px;
+    }
+    
+    .accreditation-text {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 420px) {
+    /* Ensures items stack nicely even on super-narrow viewports */
+    .accreditations-card .row-cols-2 > * {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .accreditation-item {
+        padding: 1.5rem 0;
+        border-bottom: 1px solid #f1f5f9;
+    }
+    
+    .accreditations-card .row-cols-2 > :last-child .accreditation-item {
+        border-bottom: none;
+    }
+}
+.bonus-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 2px solid transparent;
+    
+    /* Premium modern gradient border technique */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                      linear-gradient(135deg, #ff7e53 0%, #f05a28 50%, #cbd5e1 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    
+    border-radius: 28px;
+    box-shadow: 0 20px 50px rgba(240, 90, 40, 0.05);
+    overflow: hidden;
+}
+
+/* Dynamic Ambient internal background glow */
+.card-glow-element {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, var(--orange-glow) 0%, transparent 70%);
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Heading Styling elements */
+.bonus-heading {
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+}
+
+.badge-free {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    padding: 2px 12px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    display: inline-block;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
+}
+
+.text-orange-gradient {
+    background: linear-gradient(135deg, #f05a28 0%, #ff7e53 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+/* Track Selector Row Component */
+.program-choice-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+}
+
+/* Tactile Float and Glow Hover Effects */
+.program-choice-box:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-orange);
+    box-shadow: 0 15px 35px rgba(240, 90, 40, 0.12);
+}
+
+/* Modern Rounded Icon Containers mimicking the graphic base */
+.bonus-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #f05a28 0%, #ff7e53 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(240, 90, 40, 0.2);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.program-choice-box:hover .bonus-icon-wrapper {
+    transform: rotate(-10deg) scale(1.05);
+}
+
+/* Floating pulse ring animation under icons */
+.pulse-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--primary-orange);
+    border-radius: 50%;
+    opacity: 0;
+    animation: rippleEffect 2.5s infinite ease-out;
+}
+
+@keyframes rippleEffect {
+    0% { transform: scale(1); opacity: 0.5; }
+    100% { transform: scale(1.4); opacity: 0; }
+}
+
+.track-label {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    letter-spacing: 1.5px;
+    display: block;
+}
+
+.choice-title {
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    line-height: 1.4;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.program-choice-box:hover .choice-title {
+    color: var(--primary-orange);
+}
+
+/* Minimalist Center "Or" Divider */
+.or-badge-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.or-circle {
+    width: 46px;
+    height: 46px;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    color: #475569;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    z-index: 2;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bonus-card:hover .or-circle {
+    border-color: var(--primary-orange);
+    color: var(--primary-orange);
+    transform: scale(1.1);
+}
+
+/* Responsive Handling (Mobile / Tablet Layout Optimizations) */
+@media (max-width: 991.98px) {
+    .bonus-heading { font-size: 1.75rem; }
+}
+
+@media (max-width: 767.98px) {
+    .bonus-card {
+        padding: 2rem 1.5rem !important;
+        border-radius: 20px;
+    }
+    
+    .bonus-heading { font-size: 1.45rem; }
+    
+    .program-choice-box {
+        padding: 1.25rem !important;
+    }
+    
+    .choice-title { font-size: 0.95rem; }
+    
+    .or-circle {
+        width: 38px;
+        height: 38px;
+        font-size: 0.8rem;
+    }
+}
+.synergy-main-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+}
+
+/* Master Heading Styles matching typographic hierarchy */
+.synergy-heading {
+    font-size: 1.85rem;
+    line-height: 1.35;
+    letter-spacing: -0.5px;
+}
+.highlight-orange {
+    color: #F05D21;
+}
+.highlight-employable {
+    background: linear-gradient(135deg, #F05D21 0%, #ff7e53 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+/* Base Panel Rules (Applies to both columns) */
+.synergy-panel {
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    border: 1px solid transparent;
+}
+
+/* Left Degree Panel Variant definitions */
+.panel-degree {
+    background-color: #FEF5E9;
+    border-color: #ffedd5;
+}
+.text-orange-deep {
+    color: #c2410c;
+}
+.check-orange {
+    color: transparent;
+}
+.fa-circle-check{
+    color: #EF3F06;
+}
+/* Right Certification Panel Variant definitions */
+.panel-cert {
+    background-color: #D3E4FE;
+    border-color: #dbeafe;
+}
+.text-blue-deep {
+    color: #1e40af;
+}
+.check-blue {
+    color: var(--blue-brand);
+}
+
+/* Line art icon watermark layouts positioned precisely to mirror the graphic shapes */
+.panel-bg-icon {
+    position: absolute;
+    bottom: -30px;
+    right: -20px;
+    font-size: 11rem;
+    opacity: 1;
+    transform: rotate(-15deg);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Micro Interaction: Dynamic Vector Expansion and Elevation on Hover */
+.synergy-panel:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.05);
+}
+.panel-degree:hover {
+    border-color: #fed7aa;
+}
+.panel-cert:hover {
+    border-color: #bfdbfe;
+}
+.synergy-panel:hover .panel-bg-icon {
+    transform: rotate(-5deg) scale(1.1);
+    opacity: 0.3;
+}
+
+/* Checklist Items */
+.course-item, .cert-item {
+    font-size: 0.95rem;
+    color: #334155;
+    width: 50%;
+}
+.icon-check {
+    font-size: 1.15rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Floating Center Absolute Connection Badge Layer */
+.synergy-connector-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+}
+.connector-circle {
+    width: 48px;
+    height: 48px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Bottom Closing statement typography */
+.synergy-footer-text {
+    font-size: 0.95rem;
+    letter-spacing: 0.2px;
+}
+
+/* Tablet & Mobile Grid Responsiveness Layout Optimizations */
+@media (max-width: 1199.98px) {
+    .synergy-heading { font-size: 1.6rem; }
+    .panel-bg-icon { font-size: 9rem; }
+}
+
+@media (max-width: 991.98px) {
+    /* Mobile-first adjustments for small viewport performance tracking */
+    .synergy-main-card {
+        padding: 2rem 1.25rem !important;
+        border-radius: 20px;
+    }
+    .synergy-heading { font-size: 1.4rem; }
+    
+    .synergy-panel {
+        padding: 2rem 1.5rem !important;
+    }
+    
+    /* Display horizontal dividers on small devices where absolute intersection centers break container viewports */
+    .synergy-panel::before {
+        content: '';
+        display: block;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .synergy-heading { font-size: 1.25rem; }
+    .course-item, .cert-item { font-size: 0.875rem; }
+    .panel-title { font-size: 1.3rem; }
+}
+.footer{
+ background-color: #D3E4FE;
+ padding: 20px 0px;
+}
+p{
+    font-family: "Hanken Grotesk", sans-serif;
+    color:#0B1C30;
+    font-weight: 600;
+}
