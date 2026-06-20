@@ -1504,3 +1504,129 @@ p{
       font-weight: 400;
       padding: 0 5px;
     }
+    /* Testimonials Section Background Rhythm */
+    .testimonial-section {
+      background-color: #f1f5f9; /* Subtle tone to emphasize white cards clearly */
+    }
+
+    .testimonial-main-title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    /* Card Microarchitectures */
+    .testimonial-card {
+      background: #ffffff;
+      border: none;
+      border-radius: 16px;
+      padding: 35px 30px;
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                  box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Senior Premium Hover Lift Engine */
+    .testimonial-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+    }
+
+    /* Stylized Decorative Quote Mark styling matching wireframe */
+    .quote-icon-bg {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      font-size: 4.5rem;
+      font-family: 'Georgia', serif;
+      color: #dbeafe; /* Gentle blue signature hint */
+      line-height: 1;
+      opacity: 0.6;
+      pointer-events: none;
+      user-select: none;
+      transition: color 0.3s ease;
+    }
+
+    .testimonial-card:hover .quote-icon-bg {
+      color: var(--primary-orange);
+      opacity: 0.25;
+    }
+
+    /* Testimonial Typography Controls */
+    .testimonial-body {
+      position: relative;
+      z-index: 2;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-text {
+      font-size: 14px;
+      color: #475569;
+      line-height: 1.6;
+      font-weight: 400;
+      text-align: left;
+      font-style: italic;
+    }
+
+    /* Identity Meta Layout Footer block */
+    .testimonial-footer {
+      border-top: 1px solid #f1f5f9;
+      padding-top: 15px;
+      z-index: 2;
+    }
+
+    .user-avatar-wrapper {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 12px;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 2px #e2e8f0;
+    }
+
+    .user-avatar-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .user-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0;
+    }
+
+    .user-course {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Match exact image_b14dc8.png Orange Diamond Active Indicators */
+    .custom-testimonial-indicators {
+      bottom: -40px;
+      margin-bottom: 0;
+    }
+
+    .custom-testimonial-indicators button {
+      width: 10px !important;
+      height: 10px !important;
+      background-color: #cbd5e1 !important;
+      border: none !important;
+      margin: 0 4px !important;
+      opacity: 1 !important;
+      transition: transform 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease !important;
+    }
+
+    /* Transform Active indicator into a sharp diamond like wireframe mock */
+    .custom-testimonial-indicators button.active {
+      background-color: var(--primary-orange) !important;
+      transform: rotate(45deg) scale(1.1);
+    }
