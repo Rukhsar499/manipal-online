@@ -747,7 +747,7 @@ p{
            Program Row and Image Styling
            ----------------------------------------------------------- */
         .program-row {
-            margin-bottom: 100px;
+            margin-bottom: 80px;
             display: flex;
             align-items: center; /* Vertical alignment */
         }
@@ -808,7 +808,7 @@ p{
         }
 
         .program-title {
-            font-size: 2.2rem;
+            font-size: 26px;
             font-weight: 700;
             margin-bottom: 15px;
             color: #ffffff;
@@ -891,7 +891,7 @@ p{
         /* -----------------------------------------------------------
            Custom Modern Button Styling
            ----------------------------------------------------------- */
-        .btn-apply {
+        .btn-applys {
             background-color: #ffffff;
             color: #d35400;
             font-weight: 700;
@@ -906,14 +906,14 @@ p{
         }
         
         /* Modern, Pulse/Scale/Color button interaction */
-        .btn-apply:hover {
+        .btn-applys:hover {
             background-color: transparent;
             color: #ffffff;
             transform: translateY(-4px) scale(1.05);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
         
-        .btn-apply:active {
+        .btn-applys:active {
             transform: translateY(-2px) scale(1); /* Bounce back on click */
         }
 
@@ -921,6 +921,9 @@ p{
     color: var(--text-dark) !important;
     font-size: 1.85rem;
     letter-spacing: -0.5px;
+}
+.excise{
+    margin-bottom: 30px;
 }
 :root {
     --text-dark: #0f1c3f;
