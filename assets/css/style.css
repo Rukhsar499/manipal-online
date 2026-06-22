@@ -244,7 +244,9 @@ h2{
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
+.course-list{
+    width: 60%;
+}
 .accreditations-card:hover {
     border-color: var(--border-blue);
     box-shadow: 0 20px 50px rgba(59, 130, 246, 0.08);
@@ -629,12 +631,31 @@ h2{
     display: inline-flex;
     align-items: center;
 }
+.custom-accreditation-indicators {
+      bottom: -35px;
+      margin-bottom: 0;
+    }
 
+    .custom-accreditation-indicators button {
+      width: 8px !important;
+      height: 8px !important;
+      background-color: #cbd5e1 !important;
+      border: none !important;
+      margin: 0 5px !important;
+      opacity: 1 !important;
+      border-radius: 0% !important; /* Forces box layout blueprint to allow rotation */
+      transition: transform 0.3s ease, background-color 0.3s ease !important;
+    }
+
+    .custom-accreditation-indicators button.active {
+      background-color: var(--primary-orange) !important;
+      transform: rotate(45deg) scale(1.1); /* Forms the clean diamond shape */
+    }
 /* Floating Center Absolute Connection Badge Layer */
 .synergy-connector-badge {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    /* left: 50%; */
     transform: translate(-50%, -50%);
     width: auto;
     height: auto;
@@ -711,22 +732,12 @@ p{
         .section-title {
             font-size: 2.5rem;
             font-weight: 800;
-            margin-bottom: 80px;
+            margin-bottom: 10px;
             color: #0B1C30;
             letter-spacing: -1px;
             position: relative;
         }
         
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background-color: #fff;
-            margin: 20px auto 0;
-            border-radius: 2px;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
         
         .accelerator-section:hover .section-title::after {
             width: 150px; /* Expands bar on overall section hover */
