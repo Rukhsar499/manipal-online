@@ -1697,15 +1697,16 @@ p{
 
 /* Brand Colors */
 .whatsapp i{
-    color:#25D366;
+    color:#fff;
 }
 
-.call i{
-    color:#f59e0b;
+.call i {
+    color: #fff;
+    transform: rotate(90deg);
 }
 
 .enquiry i{
-    color:#4338ca;
+    color:#fff;
 }
 
 /* Floating Animation */
@@ -1734,6 +1735,73 @@ p{
 @media(max-width:991px){
     .sticky-contact-bar{
         display:none;
+    }
+}
+
+/* Mobile Sticky Contact Bar */
+.mobile-sticky-bar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+    box-shadow: 0 -4px 20px rgba(0,0,0,.12);
+    border-top: 1px solid #eee;
+}
+
+.mobile-btn{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    padding: 12px 8px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: all .3s ease;
+}
+
+.mobile-btn i{
+    font-size: 16px;
+}
+
+.mobile-btn:active{
+    transform: scale(.95);
+}
+
+.call{
+    background: #f05a28;
+}
+
+.whatsapp{
+    background: #25D366;
+}
+
+.enquiry{
+    background: #1f2937;
+}
+
+/* Center Button Highlight */
+.enquiry{
+    position: relative;
+    z-index: 2;
+   
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+}
+
+@media (max-width:991px){
+    .mobile-sticky-bar{
+        display:flex;
     }
 }
     @media (max-width: 576px) {
