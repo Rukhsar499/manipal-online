@@ -1373,26 +1373,7 @@ p{
     }
 }
 
-@media (max-width: 576px) {
 
-    .cta-box {
-        padding: 35px 20px;
-        border-radius: 15px;
-    }
-
-    .cta-title {
-        font-size: 1.5rem;
-    }
-
-    .cta-text {
-        font-size: .9rem;
-    }
-
-    .cta-btn {
-        width: 100%;
-        justify-content: center;
-    }
-}
 /* 360 Advantage Section Styles */
     .advantage-section {
       background-color: var(--bg-light);
@@ -1649,3 +1630,46 @@ p{
       background-color: var(--primary-orange) !important;
       transform: rotate(45deg) scale(1.1);
     }
+    @media (max-width: 576px) {
+
+    .cta-box {
+        padding: 35px 20px;
+        border-radius: 15px;
+    }
+
+    .cta-title {
+        font-size: 1.5rem;
+    }
+
+    .cta-text {
+        font-size: .9rem;
+    }
+
+    .cta-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .brand-text {
+    margin-left: 20px;
+}
+.feature-cards{
+    text-align: left;
+}
+.hero-section {
+    padding-top: 90px;
+    }
+h2 {
+    font-size: 26px !important;
+}
+.advantage-item-title {
+    line-height: 0px;
+    margin-bottom: 5px;
+    min-height: 20px;
+}
+.mb{
+    margin-bottom: 50px;
+}
+.feature-heading {
+    min-height: 22px;
+}
+}
