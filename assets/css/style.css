@@ -1854,4 +1854,7 @@ h2 {
 .cert-item {
 width: 61%;
 }
+.footer {
+  margin-bottom: 42px;
+}
 }
