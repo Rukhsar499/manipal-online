@@ -1672,4 +1672,12 @@ h2 {
 .feature-heading {
     min-height: 22px;
 }
+.panel-bg-icon {
+   
+    font-size: 6rem;
+    opacity: 0.2;
+}
+.cert-item {
+width: 61%;
+}
 }
